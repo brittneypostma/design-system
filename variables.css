@@ -2,72 +2,71 @@
 @import url('');
 
 body {
-  /** VARIABLES **/
-  /* Colors */
-  --accent: ;
-  --hover: ;
-  --primary: ;
-  --black: ;
-  --white: ;
+	/** VARIABLES **/
+	/* Colors */
+	--accent: ;
+	--hover: ;
+	--primary: ;
+	--black: ;
+	--white: ;
 
-  /* Containers */
-  --width: ;
-  --max-width: ;
+	/* Containers */
+	--width: ;
+	--max-width: ;
 
-  /* Font Family */
-  --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	/* Font Family */
+	--font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
 
-  /* Font Size */
-  --heading-1: ;
-  --heading-2: ;
-  --heading-3: ;
-  --heading-4: ;
-  --heading-5: ;
-  --text-base: ;
-  --text-sm: ;
+	/* Font Size */
+	--heading-1: ;
+	--heading-2: ;
+	--heading-3: ;
+	--heading-4: ;
+	--heading-5: ;
+	--text-base: ;
+	--text-sm: ;
 
-/* Letter Spacing */
-  --tight: -2px;
-  --none: 0px;
-  --loose: 2px;
-  --wide: 8px;
+	/* Letter Spacing */
+	--tight: -2px;
+	--none: 0px;
+	--loose: 2px;
+	--wide: 8px;
 
-  /* Rounded (Border-radius) */
-  --rounded-full: 100%;
-  --rounded-pill: 50px;
-  --rounded-lg: 1rem;
-  --rounded-md: 0.5rem;
-  --rounded-sm: 0.25rem;
+	/* Rounded (Border-radius) */
+	--rounded-full: 100%;
+	--rounded-pill: 50px;
+	--rounded-lg: 1rem;
+	--rounded-md: 0.5rem;
+	--rounded-sm: 0.25rem;
 
-  /* Shadows */
-  --shadow-sm: 0px 4px 6px -1px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-outline: 0 0 0 2px var(--accent);
+	/* Shadows */
+	--shadow-sm: 0px 4px 6px -1px rgba(0, 0, 0, 0.25);
+	--shadow-md: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
+	--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	--shadow-outline: 0 0 0 2px var(--accent);
 
-  /* Spacing */
-  --xxs: 0.25rem;
-  --xs: 0.5rem;
-  --sm: 0.75rem;
-  --base: 1rem;
-  --md: 1.5rem;
-  --lg: 1.75rem;
-  --xl: 2rem;
-  --2xl: 2.5rem;
-  --3xl: 3rem;
+	/* Spacing */
+	--xxs: 0.25rem;
+	--xs: 0.5rem;
+	--sm: 0.75rem;
+	--base: 1rem;
+	--md: 1.5rem;
+	--lg: 1.75rem;
+	--xl: 2rem;
+	--2xl: 2.5rem;
+	--3xl: 3rem;
 
-  /* Transitions and Animations */
-  --short: 1s;
-  --long: 2s;
-  --transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	/* Transitions and Animations */
+	--short: 1s;
+	--long: 2s;
+	--transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Intentions */
-  --bg-color: ;
-  --text-color: ;
+	/* Intentions */
+	--bg-color: ;
+	--text-color: ;
 }
 
 /* Breakpoint */
@@ -77,72 +76,134 @@ body {
 @import url('');
 
 body {
-  /** VARIABLES **/
-  /* Colors */
-  --accent: ;
-  --hover: ;
-  --primary: ;
-  --black: ;
-  --white: ;
+	/** VARIABLES **/
+	/* Colors */
+	--accent: ;
+	--hover: ;
+	--primary: ;
+	--black: ;
+	--white: ;
 
-  /* Containers */
-  --width: ;
-  --max-width: ;
+	/* Colors */
+	--primary-color-h: 0;
+	--primary-color-s: 0%;
+	--primary-color-l: 27%;
+	--secondary-color-h: 15;
+	--secondary-color-s: 100%;
+	--secondary-color-l: 50%;
+	--contrastThreshold: 60%;
 
-  /* Font Family */
-  --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	/*  Calculations Based on Lightness  */
+	--lightnessTransform: 10%;
+	--darknessTransform: 15%;
+	--primary-color-light-l: calc(var(--primary-color-l) + var(--lightnessTransform));
+	--primary-color-dark-l: calc(var(--primary-color-l) - var(--darknessTransform));
+	--secondary-color-light-l: calc(var(--secondary-color-l) + var(--lightnessTransform));
+	--secondary-color-dark-l: calc(var(--secondary-color-l) - var(--darknessTransform));
+	--color-primary: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l));
+	--color-secondary: hsl(
+		var(--secondary-color-h),
+		var(--secondary-color-s),
+		var(--secondary-color-l)
+	);
+	--color-primary-dark: hsl(
+		var(--primary-color-h),
+		var(--primary-color-s),
+		var(--primary-color-dark-l)
+	);
+	--color-secondary-dark: hsl(
+		var(--secondary-color-h),
+		var(--secondary-color-s),
+		var(--secondary-color-dark-l)
+	);
+	--color-primary-light: hsl(
+		var(--primary-color-h),
+		var(--primary-color-s),
+		var(--primary-color-light-l)
+	);
+	--color-secondary-light: hsl(
+		var(--secondary-color-h),
+		var(--secondary-color-s),
+		var(--secondary-color-light-l)
+	);
 
-  /* Font Size */
-  --heading-1: ;
-  --heading-2: ;
-  --heading-3: ;
-  --heading-4: ;
-  --heading-5: ;
-  --text-base: ;
-  --text-sm: ;
+	/*  Calculations Based on Hue  */
+	/* --color-primary-complement: hsl(calc(var(--primary-color-h) + 180),
+     var(--primary-color-s),
+     var(--primary-color-l));
+--color-primary-triad-1: hsl(calc(var(--primary-color-h) + 120),
+     var(--primary-color-s),
+     var(--primary-color-l));
+--color-primary-triad-2: hsl(calc(var(--primary-color-h) - 120),
+     var(--primary-color-s),
+     var(--primary-color-l));
+--color-secondary-complement: hsl(calc(var(--secondary-color-h) + 180),
+     var(--secondary-color-s),
+     var(--secondary-color-l));
+--color-secondary-triad-1: hsl(calc(var(--secondary-color-h) + 120),
+     var(--secondary-color-s),
+     var(--secondary-color-l));
+--color-secondary-triad-2: hsl(calc(var(--secondary-color-h) - 120),
+     var(--secondary-color-s),
+     var(--secondary-color-l)); */
 
-/* Letter Spacing */
-  --tight: -2px;
-  --none: 0px;
-  --loose: 2px;
-  --wide: 8px;
+	/* Containers */
+	--width: ;
+	--max-width: ;
 
-  /* Rounded (Border-radius) */
-  --rounded-full: 100%;
-  --rounded-pill: 50px;
-  --rounded-lg: 1rem;
-  --rounded-md: 0.5rem;
-  --rounded-sm: 0.25rem;
+	/* Font Family */
+	--font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
 
-  /* Shadows */
-  --shadow-sm: 0px 4px 6px -1px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-outline: 0 0 0 2px var(--accent);
+	/* Font Size */
+	--heading-1: ;
+	--heading-2: ;
+	--heading-3: ;
+	--heading-4: ;
+	--heading-5: ;
+	--text-base: ;
+	--text-sm: ;
 
-  /* Spacing */
-  --xxs: 0.25rem;
-  --xs: 0.5rem;
-  --sm: 0.75rem;
-  --base: 1rem;
-  --md: 1.5rem;
-  --lg: 1.75rem;
-  --xl: 2rem;
-  --2xl: 2.5rem;
-  --3xl: 3rem;
+	/* Letter Spacing */
+	--tight: -2px;
+	--none: 0px;
+	--loose: 2px;
+	--wide: 8px;
 
-  /* Transitions and Animations */
-  --short: 1s;
-  --long: 2s;
-  --transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	/* Rounded (Border-radius) */
+	--rounded-full: 100%;
+	--rounded-pill: 50px;
+	--rounded-lg: 1rem;
+	--rounded-md: 0.5rem;
+	--rounded-sm: 0.25rem;
 
-  /* Intentions */
-  --bg-color: ;
-  --text-color: ;
+	/* Shadows */
+	--shadow-sm: 0px 4px 6px -1px rgba(0, 0, 0, 0.25);
+	--shadow-md: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
+	--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	--shadow-outline: 0 0 0 2px var(--accent);
+
+	/* Spacing */
+	--xxs: 0.25rem;
+	--xs: 0.5rem;
+	--sm: 0.75rem;
+	--base: 1rem;
+	--md: 1.5rem;
+	--lg: 1.75rem;
+	--xl: 2rem;
+	--2xl: 2.5rem;
+	--3xl: 3rem;
+
+	/* Transitions and Animations */
+	--short: 1s;
+	--long: 2s;
+	--transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	/* Intentions */
+	--bg-color: ;
+	--text-color: ;
 }
 
 /* Breakpoint */
