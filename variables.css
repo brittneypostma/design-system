@@ -127,6 +127,22 @@ body {
 		var(--secondary-color-light-l)
 	);
 
+	--alpha: 1;
+	--dark: 0;
+	/* --color-accent: hsl(15, 100%, calc((50 + (var(--dark, 0) * 100)) * 1%));
+	--color-primary-100: hsl(0, 0%, calc((77 + (var(--dark, 0) * 100)) * 1%), var(--alpha));
+	--color-primary-200: hsl(0, 0%, calc((50 + (var(--dark, 0) * 100)) * 1%), var(--alpha)); */
+	--color-primary: hsl(224 44% 95% / var(--alpha));
+	--color-primary-100: hsl(209 36% 86% / var(--alpha));
+	--color-primary-200: hsl(209 22% 77% / var(--alpha));
+	--color-accent: hsl(15 100% 50% / var(--alpha));
+	--color-white: hsl(0 0% 100% / var(--alpha));
+	--color-black: hsl(0 0% 0% / var(--alpha));
+	--color-heading: hsl(0 0% 0% 0.7 / var(--alpha));
+	--color-text: hsl(0 0% 27% / var(--alpha));
+	/* --color-bg: hsl(190, 50%, calc((80 - (var(--dark, 0) * 60)) * 1%), var(--alpha));
+	--color-text: hsl(190, 20%, calc((27 + (var(--dark, 0) * 30)) * 1%), var(--alpha)); */
+
 	/*  Calculations Based on Hue  */
 	/* --color-primary-complement: hsl(calc(var(--primary-color-h) + 180),
      var(--primary-color-s),
